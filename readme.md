@@ -1,6 +1,6 @@
 # Smailsjob project
 
-## ОРГХИМ
+## Welldone
 #### Первый запуск
 
 0. npm -i - Установка node_modules
