@@ -1,0 +1,40 @@
+h1, .heading-1
+  +fs(57px)
+  font-weight: 700
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  line-height: 1.25
+  color: $c4
+  +screen('max', 575)
+    +fs(42px)
+h2, .heading-2
+  +fs(51px)
+  font-weight: 700
+  letter-spacing: 0.01em
+  text-transform: uppercase
+  line-height: 1
+  color: $c4
+  +screen('max', 575)
+    +fs(32px)
+
+.title
+  margin-bottom: 4rem
+  position: relative
+  &:before
+    content: '#'
+    +fs(16px)
+    color: $c2
+    text-transform: uppercase
+    font-weight: 700
+    padding-right: 1rem
+    font-family: $font
+  span
+    color: $c2
+.text-uppercase
+  text-transform: uppercase
+.text-right
+  text-align: right
+.text-center
+  text-align: center
+.text-underline
+  text-decoration: underline

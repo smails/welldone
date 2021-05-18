@@ -1,0 +1,72 @@
+.graffiti
+  position: relative
+  +screen('max', 1023)
+    padding-bottom: 45rem
+  +screen('max', 575)
+    padding-bottom: 11rem
+  &:after
+    content: url(../icons/icon-line--graffiti.svg)
+    position: absolute
+    bottom: 0
+    right: 0
+    +screen('max', 1200)
+      transform: scale(.6) translate(40%, 40%)
+    +screen('max', 575)
+      display: none
+  &__inner
+    max-width: 103rem
+    position: relative
+    z-index: 3
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    +screen('max', 575)
+      display: block
+  &__picture
+    position: relative
+    max-width: 44rem
+    flex-basis: 48%
+    +screen('max', 575)
+      flex-basis: 100%
+      max-width: 100%
+    &:after
+      content: ''
+      width: 25.6rem
+      height: 25.6rem
+      display: block
+      position: absolute
+      bottom: -10rem
+      left: -15rem
+      background: $c2
+      border-radius: 100%
+  &__pic
+    width: 100%
+    object-fit: cover
+    vertical-align: middle
+    position: relative
+    z-index: 2
+  &__content
+    max-width: 530rem
+    flex-basis: 50%
+    +screen('max', 575)
+      padding-top: 10rem
+  &__text
+    color: #fff
+  &__form
+    margin-top: s(40px)
+    max-width: 42rem
+    +screen('max', 1023)
+      position: absolute
+      top: 100%
+      left: 0
+      max-width: 100%
+      width: 100%
+      box-sizing: border-box
+      padding: 0 s(20px)
+      margin-top: s(20px)
+    +screen('max', 575)
+      position: relative
+      padding: 0
+  &__btn
+    margin-top: s(40px)

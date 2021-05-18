@@ -1,0 +1,26 @@
+.video-greeting
+  position: relative
+  &:after
+    content: url(../icons/icon-line--video-greeting.svg)
+    position: absolute
+    top: 0
+    right: 0
+    +screen('max', 1200)
+      transform: scale(.7) translate(25%, -25%)
+    +screen('max', 575)
+      display: none
+  &__inner
+    position: relative
+    z-index: 2
+  &__top
+    position: relative
+    margin-bottom: 10rem
+    max-width: 111rem
+    margin: 0 auto
+  &__text
+    color: #fff
+    margin-bottom: 4rem
+    +screen('max', 1400)
+      max-width: 75%
+    +screen('max', 575)
+      max-width: 100%

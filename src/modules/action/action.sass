@@ -1,0 +1,33 @@
+.action
+  &_bg
+    position: relative
+    &:after
+      content: url(../icons/icon-line--action.svg)
+      position: absolute
+      top: 0
+      left: 0
+      +screen('max', 1600)
+        left: -15%
+      +screen('max', 1200)
+        display: none
+  &__inner
+    position: relative
+    z-index: 3
+  &__text
+    color: #5C5C5C
+    margin-bottom: s(40px)
+    &_white
+      color: #fff
+  &__row
+    display: flex
+    justify-content: space-between
+    +screen('max', 575)
+      display: block
+  &__btn
+    margin-top: s(30px)
+  .group, .file
+    flex-basis: 32%
+    max-width: 35rem
+    +screen('max', 575)
+      flex-basis: 100%
+      max-width: 100%

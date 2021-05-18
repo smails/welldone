@@ -1,0 +1,181 @@
+.header
+  padding: s(27px) 0
+  background: #fff
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.04)
+  position: sticky
+  top: 0
+  z-index: 99
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +screen('max', 1600)
+      padding: 0 s(20px)
+  &__pic
+    vertical-align: middle
+    width: 31rem
+    +screen('max', 1600)
+      width: 25rem
+    +screen('max', 1400)
+      width: 20rem
+    +screen('max', 1200)
+      width: 31rem
+  &__btn
+    margin-left: 4rem
+    +screen('max', 1600)
+      margin-left: 2rem
+    +screen('max', 1400)
+      margin-left: 1rem
+    +screen('max', 1200)
+      margin-top: 3rem
+    +screen('max', 575)
+      width: calc(100% - 6rem)
+      margin-left: 3rem
+  &__burger
+    display: block
+    position: relative
+    height: 4px
+    transition: .4s
+    width: 45px
+    background: #000
+    position: relative
+    left: 0px
+    border-radius: 15px
+    +screen('min', 1201)
+      display: none
+    &::after,
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      background: #000
+      width: 45px
+      height: 4px
+      transition: .4s
+      border-radius: 15px
+    &::after
+      top: 12px
+    &::before
+      top: -12px
+    &.open
+      background: transparent
+      &::before,
+      &::after
+        top: 0;
+      &::after
+        transform: rotate(-45deg)
+      &::before
+        transform: rotate(45deg)
+  &__box
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    +screen('max', 1200)
+      display: none
+      position: absolute
+      top: 134px
+      left: 0
+      width: 100%
+      height: 100vh
+      z-index: 99
+      background: #fff
+      padding-top: 10rem
+      +screen('max', 575)
+        top: 95px
+    .nav
+      +screen('max', 1200)
+        margin-top: 3rem
+      &__list
+        +screen('max', 1200)
+          display: block
+      &__item
+        +screen('max', 1200)
+          padding: 1.5rem 0
+          margin: 0 3rem
+          border-bottom: 2px solid $c3
+        +screen('max', 575)
+          padding: 3rem 0
+      &__link
+        +screen('max', 1200)
+          +fs(28px)
+.nav
+  flex-grow: 1
+  &__list
+    display: flex
+    justify-content: flex-end
+    +screen('max', 575)
+      display: block
+  &__item
+    margin-bottom: 0
+    margin-left: 5rem
+    +screen('max', 1600)
+      margin-left: 1.5rem
+    +screen('max', 1400)
+      margin-left: 1rem
+    +screen('max', 575)
+      margin-left: 0
+  &__link
+    font-weight: 700
+    letter-spacing: 0.07em
+    color: $c4
+    text-transform: uppercase
+    position: relative
+    &:before, &:after
+      content: ''
+      height: 2px
+      position: absolute
+      left: 0
+      background: $c3
+      display: block
+    &:before
+      width: 0
+      bottom: -2px
+      transition: .5s ease
+    &:after
+      width: 0
+      bottom: -6px
+      transition: .5s ease .2s
+    &:hover
+      &:before
+        width: 100%
+      &:after
+        width: 80%
+    &.active
+      color: $c3
+
+.lang
+  display: flex
+  margin-left: 3rem
+  +screen('max', 1600)
+    margin-left: 1.5em
+  +screen('max', 1400)
+    margin-left: 1rem
+  +screen('max', 575)
+    margin-left: 3rem
+    position: absolute
+    top: 2rem
+    left: 0
+    width: calc(100% - 6rem)
+    justify-content: space-between
+  &__link
+    display: inline-block
+    padding: 2.3rem
+    border: 1px solid #D8D8D8
+    font-weight: 700
+    color: #b6b6b6
+    text-transform: uppercase
+    letter-spacing: 0.07em
+    line-height: 1
+    transition: .5s ease
+    +screen('max', 575)
+      flex-basis: 45%
+      width: 25rem
+      text-align: center
+      height: 10rem
+      box-sizing: border-box
+      line-height: 5.5rem
+    &:hover
+      color: $c3
+    &.active
+      border-color: $c3
+      color: $c3

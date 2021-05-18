@@ -1,0 +1,28 @@
+mixin videog(vars)
+  +b.video-greeting.section_green#event
+    +e.inner.inner
+      +e.top
+        +e.H2.title.title
+          span Конкурс видео 
+          | поздравлений
+        +e.P.text Значимость этих проблем настолько очевидна, что социально-экономическое развитие способствует подготовке и реализации вывода текущих активов. Также как сложившаяся структура организации влечет за собой процесс внедрения 
+        +e.BUTTON.btn.btn_transparent._white отправить видео
+      +b.slider
+        +e.H2.title.title Устами младенца
+        .swiper-container
+          .swiper-wrapper
+            - for(var i = 0; i < 3; i++) {
+              .swiper-slide
+                +b.A.video(href="#" data-fancybox)
+                  +e.IMG.pic(src='/images/video-slide.jpg' alt='')
+                  +e.play_slide
+                  +e.P.title Иванова Александра поздравление
+                    br
+                    | с Днем Космонавтики
+            - }
+        .swiper-button-prev
+          svg(width='19' height='30' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M18.525 26.475L7.075 15l11.45-11.475L15 0 0 15l15 15 3.525-3.525z' fill='#fff')
+        .swiper-button-next
+          svg(width='19' height='30' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M.475 26.475L11.925 15 .475 3.525 4 0l15 15L4 30 .475 26.475z' fill='#fff')

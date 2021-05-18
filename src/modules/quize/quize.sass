@@ -1,0 +1,94 @@
+.quize
+  position: relative
+  +screen('max', 575)
+    padding-bottom: 25rem
+  &:before
+    content: url(../icons/icon-line--quize-left.svg)
+    position: absolute
+    bottom: -3rem
+    left: 0
+    z-index: -1
+    +screen('max', 1023)
+      display: none
+  &:after
+    content: url(../icons/icon-line--quize-right.svg)
+    position: absolute
+    bottom: 0
+    right: 0
+    z-index: -1
+    +screen('max', 1600)
+      transform: scale(.9) translate(5%, 5%)
+    +screen('max', 1200)
+      transform: scale(.6) translate(40%, 40%)
+    +screen('max', 575)
+      content: url(../icons/icon-line--quize-right-mobile.svg)
+      transform: scale(.9) translate(0%, 25%)
+  &__title
+    position: relative
+    &:after
+      content: url(../icons/icon-quetion.svg)
+      top: -10rem
+      position: absolute
+      +screen('max', 575)
+        top: -15rem
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: start
+    +screen('max', 1023)
+      display: block
+  &__action
+    padding: s(45px) s(45px) s(65px)
+    box-sizing: border-box
+    background: $c3
+    max-width: 51rem
+    flex-basis: 50%
+    +screen('max', 1200)
+      padding: s(45px) s(25px) s(65px)
+    +screen('max', 1023)
+      max-width: 100%
+      flex-basis: 0
+      margin-bottom: 3rem
+  &__caption
+    position: relative
+    +fs(26px)
+    letter-spacing: 0.07em
+    text-transform: uppercase
+    color: #fff
+    line-height: 1
+    font-weight: 700
+    width: 100%
+    vertical-align: middle
+    margin-bottom: s(15px)
+    +screen('max', 1200)
+      +fs(24px)
+    +screen('max', 575)
+      +fs(22px)
+    &:after
+      content: url('../icons/icon-team.svg')
+      vertical-align: middle
+      display: inline-block
+      +screen('max', 575)
+        position: absolute
+        top: -2.5rem
+        right: -2rem
+  &__holder
+    +fs(18px)
+    font-weight: 700
+    text-transform: uppercase
+    color: #fff
+    line-height: 1
+    margin-bottom: s(10px)
+    letter-spacing: 0.07em
+    margin-top: s(35px)
+  &__info
+    flex-basis: 45%
+  &__add
+    display: flex
+    align-items: center
+    margin-bottom: s(40px)
+    span
+      color: #fff
+      padding-left: 1rem
+  &__btn
+    margin-top: 1.5rem

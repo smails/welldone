@@ -1,0 +1,68 @@
+.quest
+  position: relative
+  +screen('max', 575)
+    padding-bottom: 20rem
+  &:after
+    content: url(../icons/icon-line--quest.svg)
+    position: absolute
+    bottom: -1rem
+    right: 20%
+    +screen('max', 1200)
+      right: 0
+    +screen('max', 575)
+      right: 0
+      transform: scale(.6) translate(30%, 40%)
+  &__title
+    position: relative
+    &:after
+      content: url(../icons/icon-quetion.svg)
+      top: -10rem
+      position: absolute
+      +screen('max', 575)
+        top: -15rem
+  &__text
+    color: #5c5c5c
+  &__btn
+    margin-top: s(40px)
+    z-index: 3
+    position: relative
+
+.footer
+  padding: s(27px) 0 s(100px)
+  background: #282828
+  +screen('max', 1200)
+    padding: s(27px) 0 s(70px)
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +screen('max', 1200)
+      flex-wrap: wrap
+    +screen('max', 575)
+      display: block
+  &__link
+    +screen('max', 1200)
+      order: -1
+  &__pic
+    vertical-align: middle
+  &__btn
+    margin-left: 7.5rem
+    +screen('max', 1600)
+      margin-left: 3rem
+    +screen('max', 1200)
+      order: -1
+    +screen('max', 575)
+      margin-left: 0
+  .nav
+    +screen('max', 1200)
+      margin-top: 2rem
+    +screen('max', 575)
+      margin: 10rem 0 3rem
+    &__link
+      color: #fff
+    &__list
+      +screen('max', 1200)
+        justify-content: center
+    &__item
+      +screen('max', 575)
+        margin-bottom: 7rem

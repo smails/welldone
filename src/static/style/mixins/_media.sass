@@ -1,0 +1,11 @@
+@mixin screen($type, $width, $orientation: portrait)
+  @if $orientation == landscape
+    @media screen and (#{$type}-width: #{$width}px) and (orientation: landscape)
+      @content
+  @else
+    @media screen and (#{$type}-width: #{$width}px)
+      @content
+
+@function s($size)
+  $width: $size / 16px
+  @return $width * 1em

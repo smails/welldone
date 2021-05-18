@@ -1,0 +1,21 @@
+mixin header()
+  +b.HEADER.header
+    +e.inner.inner
+      +e.A.link(href="/")
+        +e.IMG.pic(src='/icons/logo.svg' alt='Логотип')
+      +e.box
+        +b.NAV.nav
+          +e.UL.list
+            +e.LI.item
+              +e.A.link(href="#event") о мероприятии
+            +e.LI.item
+              +e.A.link(href="#broadcast") трансляция
+            +e.LI.item
+              +e.A.link(href="#calendar") календарь событий
+            +e.LI.item
+              +e.A.link(href="#video") видео
+        +e.BUTTON.btn.btn-register зарегистрироваться
+        +b.lang
+          +e.A.link.active(href="#") Ru
+          +e.A.link(href="#") EN
+      +e.BUTTON.burger

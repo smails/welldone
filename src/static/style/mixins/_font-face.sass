@@ -1,0 +1,13 @@
+@mixin font-face($name, $file-path, $weight, $style, $local, $local2)
+	@font-face
+		font-family: $name
+		font-weight: $weight
+		font-style: $style
+		src: local("#{$local}"), local("#{$local2}"),  url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
+
+@function calculateRem($size)
+	$remSize: $size / 16px
+	@return $remSize * 1em
+
+@mixin fs($size)
+	font-size: calculateRem($size)

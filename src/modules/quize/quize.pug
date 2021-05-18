@@ -1,0 +1,29 @@
+mixin quize(vars)
+  +b.quize.section
+    +e.inner.inner_middle
+      +e.H2.title.title
+        span Квиз 
+        | онлайн
+      +e.row
+        +e.FORM.action
+          +e.H3.caption регистрация команды
+          +b.group
+            +e.INPUT.field(type="text" placeholder="Название команды")
+          +b.group
+            +e.INPUT.field(type="text" placeholder="ФИО капитана")
+          +e.P.holder Игроки
+          +e.groups
+            - for(var i = 0; i < 4; i++) {
+              +b.group
+                +e.INPUT.field(type="text" placeholder="ФИО")
+            - }
+          +e.BUTTON.add
+            svg(width='55' height='55' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(stroke='#fff' stroke-width='2' d='M1 1h53v53H1zM28 12v30M43 27H13')
+            span Добавить игрока
+          +e.BUTTON.btn.btn-register зарегистрироваться
+        +e.info
+          +b.A.video(href="#" data-fancybox)
+            +e.IMG.pic(src='/images/quize-video.jpg' alt='')
+            +e.play
+          +e.A.btn.btn_transparent._green Читать правила
