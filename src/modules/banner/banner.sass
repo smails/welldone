@@ -1,0 +1,88 @@
+.banner
+  height: 65rem
+  position: relative
+  background-image: url(../images/banner-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: left
+  display: flex
+  align-items: center
+  +screen('max', 1600)
+    padding-bottom: 10rem
+    overflow: hidden
+    box-sizing: border-box
+    background-size: 100% 90%
+    background-position: left top
+  +screen('max', 1200)
+    background-size: 100% 95%
+  +screen('max', 1023)
+    overflow: initial
+    background-size: cover
+    padding-bottom: 7rem
+    height: 70rem
+  +screen('max', 575)
+    height: 140rem
+    background-image: url(../images/banner-bg--mobile.jpg)
+    padding-bottom: 0
+    align-items: flex-start
+    padding-top: 10rem
+    overflow: hidden
+  &:after
+    content: ''
+    width: 86.5rem
+    height: 65rem
+    background-image: url(../icons/icon-banner.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: left
+    display: block
+    position: absolute
+    right: 2rem
+    bottom: -10rem
+    z-index: 2
+    +screen('max', 1600)
+      width: 70rem
+      height: 55rem
+      background-position: right
+      right: -10rem
+      bottom: -5rem
+    +screen('max', 1200)
+      width: 60rem
+      height: 45rem
+      right: -10rem
+      bottom: -5rem
+    +screen('max', 1023)
+      right: 0
+      bottom: -15rem
+      background-position-x: 6rem
+    +screen('max', 575)
+      width: 100%
+      bottom: 7rem
+      background-position-x: 0
+      background-size: contain
+      transform: scale(1.5)
+  &__title
+    max-width: 102rem
+    font-weight: 500
+    font-family: $font
+    +fs(55px)
+    color: $c2
+    text-transform: uppercase
+    letter-spacing: 0.06em
+    +screen('max', 1023)
+      +fs(50px)
+    +screen('max', 575)
+      +fs(40px)
+    br
+      display: initial
+      +screen('min', 1024)
+        display: none
+  &__subtitle
+    +fs(18px)
+    font-weight: 700
+    max-width: 95rem
+    margin-top: 2rem
+    +screen('max', 1400)
+      max-width: 80rem
+  &__btn
+    margin-top: 4.5rem

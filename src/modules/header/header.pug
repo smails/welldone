@@ -1,21 +1,30 @@
-mixin header()
+mixin header(state)
   +b.HEADER.header
     +e.inner.inner
       +e.A.link(href="/")
         +e.IMG.pic(src='/icons/logo.svg' alt='Логотип')
       +e.box
+        +b.search
+          +e.INPUT.field(type="search" placeholder="Что вы ищите?")
         +b.NAV.nav
           +e.UL.list
             +e.LI.item
-              +e.A.link(href="#event") о мероприятии
+              +e.A.link(href="#rules") правила
             +e.LI.item
-              +e.A.link(href="#broadcast") трансляция
+              +e.A.link(href="#news") новости
             +e.LI.item
-              +e.A.link(href="#calendar") календарь событий
+              +e.A.link(href="#marafon") марафон
             +e.LI.item
-              +e.A.link(href="#video") видео
-        +e.BUTTON.btn.btn-register зарегистрироваться
-        +b.lang
-          +e.A.link.active(href="#") Ru
-          +e.A.link(href="#") EN
+              +e.A.link(href="#vk") сообщество вк
+        +e.control
+          if state == 'lk'
+            +e.BUTTON.btn.btn выйти
+          else
+            //- +e.A.login.js-open-modal(href="#authorization")
+            //-   +e.IMG.login-pic(src='/icons/icon-login--1.svg' alt='')
+            //-   +e.SPAN.login-text войти
+            +e.BUTTON.login
+              +e.IMG.login-pic(src='/icons/icon-login--2.svg' alt='')
+              +e.SPAN.login-text войти
+            +e.A.btn.btn-register.js-open-modal(href="#registration") Регистрация
       +e.BUTTON.burger

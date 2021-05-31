@@ -4,7 +4,7 @@ h1, .heading-1
   letter-spacing: 0.05em
   text-transform: uppercase
   line-height: 1.25
-  color: $c4
+  color: $c1
   +screen('max', 575)
     +fs(42px)
 h2, .heading-2
@@ -13,23 +13,35 @@ h2, .heading-2
   letter-spacing: 0.01em
   text-transform: uppercase
   line-height: 1
-  color: $c4
+  color: $c1
   +screen('max', 575)
     +fs(32px)
 
 .title
-  margin-bottom: 4rem
   position: relative
-  &:before
-    content: '#'
-    +fs(16px)
-    color: $c2
-    text-transform: uppercase
-    font-weight: 700
-    padding-right: 1rem
-    font-family: $font
-  span
-    color: $c2
+  padding: 2.5rem 0
+  +fs(32px)
+  color: #fff
+  text-transform: uppercase
+  letter-spacing: 0.02em
+  font-weight: 700
+  line-height: 1.35
+  +screen('max', 575)
+    +fs(27px)
+  &_decore
+    padding-right: 5rem
+    margin-bottom: 4rem
+    &:before
+      content: ''
+      width: 100%
+      background: $c3
+      width: calc(100% + 250px)
+      height: 100%
+      position: absolute
+      left: -250px
+      top: 0
+      display: block
+      z-index: -1
 .text-uppercase
   text-transform: uppercase
 .text-right

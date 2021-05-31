@@ -1,0 +1,289 @@
+.team-list
+  padding: 9rem 0 12rem
+  background-color: $c3
+  background-image: url(../images/team-bg.png)
+  background-size: contain
+  background-position: center
+  +screen('max', 1023)
+    background-image: none
+    padding: 6rem 0 9rem
+.table
+  margin-top: 2rem
+  background: #fff
+  border-radius: 10px
+  +screen('max', 1023)
+    background: none
+    margin-top: 0
+  &__head
+    padding: 3rem
+    position: relative
+    +screen('max', 1023)
+      padding: 1.5rem 0
+      width: calc(100% + 4rem)
+      left: -2rem
+    +screen('max', 575)
+      margin-bottom: 6.4rem
+  &__title
+    padding: 2rem 10rem 2rem 3rem
+    border-radius: 100px
+    background: $c2
+    color: #fff
+    +fs(30px)
+    line-height: 1
+    font-weight: 700
+    position: relative
+    display: inline-block
+    min-width: 70rem
+    box-sizing: border-box
+    +screen('max', 1023)
+      min-width: 100%
+      border-radius: 0
+    +screen('max', 575)
+      +fs(26px)
+      line-height: 1.5
+    span
+      +screen('max', 575)
+        display: block
+    &:before
+      content: url(../icons/icon-team.svg)
+      position: absolute
+      right: 2.5rem
+      top: 50%
+      transform: translateY(-50%)
+      +screen('max', 575)
+        transform: none
+        right: auto
+        left: 130px
+        top: 1rem
+  &__body
+    text-align: center
+  &__row
+    display: grid
+    grid-template-columns: 14rem 12rem 15rem 16rem 21rem 18rem 10rem
+    border-bottom: 1px solid #D7D7D7
+    +screen('max', 1200)
+      grid-template-columns: 14rem 12rem 10rem 16rem 19rem 18rem 10rem
+    +screen('max', 1023)
+      display: block
+      border-bottom: 0
+      background: #fff
+      border-radius: 10px
+      width: 100%
+      max-width: 335px
+      display: inline-block
+      margin-bottom: 60px
+      margin-right: 2rem
+      position: relative
+    +screen('max', 575)
+      margin-right: 0
+    &_head
+      background: #F9F9F9
+      +screen('max', 1023)
+        display: none
+    &:nth-of-type(2n + 1)
+      margin-right: 0
+    &:last-of-type
+      border-bottom: 0
+  &__col
+    text-overflow: ellipsis
+    padding: 1.7rem 3rem
+    box-sizing: border-box
+    border-right: 1px solid #D7D7D7
+    font-weight: 400
+    display: flex
+    align-items: center
+    line-height: 19px
+    +screen('max', 1200)
+      padding: 1.7rem
+    +screen('max', 1023)
+      border-right: 0
+      border-bottom: 1px solid #D7D7D7
+      font-weight: 700
+      +fs(18px)
+      padding: 1.7rem 3rem
+      min-height: 60px
+    &_head
+      font-weight: 700
+    &:last-of-type
+      border-right: 0
+    br
+      +screen('max', 1023)
+        display: none
+  &__remove
+    position: absolute
+    bottom: -40px
+    left: 0
+    display: flex
+    align-items: center
+    +screen('min', 1023)
+      display: none
+  &__add-pers
+    width: 100%
+    height: 80px
+    border: 3px solid #FFFFFF
+    box-sizing: border-box
+    border-radius: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+    +fs(16px)
+    font-weight: 900
+    letter-spacing: 0.06em
+    text-transform: uppercase
+    color: #fff
+    margin-top: 3rem
+    +screen('min', 1023)
+      display: none
+  &__desk-text
+    +screen('max', 1023)
+      display: none
+  &__remove-title
+    +fs(18px)
+    color: #fff
+    padding-left: 1.5rem
+.mobile-radio
+  display: flex
+  align-items: center
+  +screen('min', 1023)
+    display: none
+
+.lk
+  margin: 9rem 0
+  &__inner
+    max-width: 116rem
+  &__info
+    margin-top: 7rem
+  &__head
+    display: flex
+    align-items: center
+    +screen('max', 1023)
+      display: block
+  &__picture
+    box-sizing: border-box
+    padding: 10px
+    background-image: url(../icons/pattern-photo.svg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    position: relative
+    z-index: 1
+    max-width: 200px
+  &__pic
+    width: 180px
+    height: 180px
+    border-radius: 100%
+    object-fit: cover
+    vertical-align: middle
+  &__caption
+    padding: 2rem 4rem 2rem 8rem
+    border-top-right-radius: 100px
+    border-bottom-right-radius: 100px
+    background: #FF4F12
+    color: #fff
+    +fs(36px)
+    line-height: 1
+    font-weight: 700
+    position: relative
+    display: inline-block
+    min-width: 70rem
+    box-sizing: border-box
+    font-family: $font
+    width: calc(100% - 185px)
+    position: relative
+    left: -50px
+    flex-shrink: 0
+    +screen('max', 1023)
+      left: -2rem
+      width: calc(100% + 2rem)
+    +screen('max', 575)
+      +fs(26px)
+      line-height: 1.5
+      padding-left: 2rem
+      min-width: 100%
+    span
+      +screen('max', 575)
+        display: block
+  &__body
+    margin-top: 4.5rem
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    +screen('max', 575)
+      display: block
+  &__list
+    background: #F8F8F8
+    border-radius: 4px
+    width: 50%
+    max-width: 380px
+    padding-bottom: 4rem
+    +screen('max', 1023)
+      flex-shrink: 0
+    +screen('max', 575)
+      width: 100%
+      margin-bottom: 6rem
+  &__item
+    display: flex
+    &_head
+      border-bottom: 1px solid #E9E9E9
+  &__name
+    padding: 2.5rem 3rem 0
+    box-sizing: border-box
+    flex-basis: calc(100% / 2)
+  &__hold
+    padding: 3rem
+    box-sizing: border-box
+    flex-basis: calc(100% / 2)
+    font-weight: 700
+    +fs(20px)
+    line-height: 1.4
+  &__control
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+  &__btn
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50%
+    max-width: 300px
+    border-radius: 100px
+    border: 3px solid
+    height: 100px
+    font-weight: 900
+    +fs(18px)
+    padding: 0 2rem
+    line-height: 1.5
+    text-transform: uppercase
+    box-sizing: border-box
+    margin-bottom: 2rem
+    text-align: center
+    transition: 0.5s ease
+    background: #fff
+    +screen('max', 1023)
+      width: 100%
+    &:hover
+      color: #fff
+    &_purple
+      color: $c2
+      border-color: $c2
+      &:hover
+        background-color: $c2
+        box-shadow: 0px 16px 33px rgba(120, 0, 255, 0.2)
+    &_blue
+      color: #53A6EA
+      border-color: #53A6EA
+      &:hover
+        background-color: #53A6EA
+        box-shadow: 0px 16px 33px rgba(83, 166, 234, 0.2)
+    &_green
+      color: #48DBA7
+      border-color: #48DBA7
+      &:hover
+        background-color: #48DBA7
+        box-shadow: 0px 16px 33px rgba(72, 219, 167, 0.2)
+    &_tomato
+      color: #FF4F12
+      border-color: #FF4F12
+      &:hover
+        background-color: #FF4F12
+        box-shadow: 0px 16px 33px rgba(255, 79, 18, 0.2)

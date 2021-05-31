@@ -1,22 +1,51 @@
-mixin footer(vars)
-  +b.quest.section_gray
-    +e.inner.inner_middle
-      +e.H2.title.title
-        span Квест
-      +e.P.text Задача организации, в особенности же высококачественный прототип будущего проекта играет определяющее значение для существующих финансовых и административных условий. Каждый из нас понимает очевидную вещь: постоянное информационно-пропагандистское обеспечение нашей деятельности играет определяющее значение для экономической целесообразности принимаемых решений. 
-      +e.BUTTON.btn.btn_green-border.js-open-quiz начать квест
+mixin footer(state)
+  if state != 'lk'
+    +b.rules
+      +e.inner.inner_middle
+        +e.H2.title.title_decore Подробности о марафоне можешь узнать
+          br
+          | в разделе Правила.
+        +e.bottom
+          +e.P.text.title Жми кнопку
+          +e.BUTTON.btn Правила
   +b.FOOTER.footer
     +e.inner.inner
-      +e.A.link(href="/")
-        +e.IMG.pic(src='/icons/logo.svg' alt='Логотип')
-      +b.NAV.nav
-        +e.UL.list
-          +e.LI.item
-            +e.A.link(href="#event") о мероприятии
-          +e.LI.item
-            +e.A.link(href="#broadcast") трансляция
-          +e.LI.item
-            +e.A.link(href="#calendar") календарь событий
-          +e.LI.item
-            +e.A.link(href="#video") видео
-      +e.BUTTON.btn.btn-register зарегистрироваться
+      +e.col
+        +e.A.link(href="/")
+          +e.IMG.pic(src='/icons/logo.svg' alt='Логотип')
+        +e.info
+          +e.row
+            +e.P.caption Контакты
+            +e.P.text Москва, Арабский переулок, д. 215б, офис 100
+          +e.row
+            +e.P.caption Наши реквизиты
+            +e.P.text ИНН 1234567891
+              br
+              | КПП 123456789
+              br
+              | ОКПО 12345678
+              br
+              | ОГРН 1234567891234
+      +e.col
+        +b.NAV.footer-nav
+          +e.P.title Основные разделы
+          +e.UL.list
+            +e.LI.item
+              +e.A.link(href="#rules") Правила
+            +e.LI.item
+              +e.A.link(href="#news") Новости
+            +e.LI.item
+              +e.A.link(href="#marafon") Марафон
+            +e.LI.item
+              +e.A.link(href="#vk") Сообщество вк
+        +b.NAV.footer-nav
+          +e.P.title для номинанта
+          +e.UL.list
+            +e.LI.item
+              +e.A.link(href="#") Личный кабинет
+            +e.LI.item
+              +e.A.link(href="#") Результаты
+            +e.LI.item
+              +e.A.link(href="#") Правила
+            +e.LI.item
+              +e.A.link(href="#") Пользовательское соглашение

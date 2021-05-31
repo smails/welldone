@@ -4,79 +4,41 @@
   align-items: center
   +fs(16px)
   letter-spacing: 0.07em
-  text-transform: uppercase
-  font-weight: bold
-  background-color: $c3
   color: #fff
-  border: 3px solid
-  padding: s(19px) s(45px)
+  text-transform: uppercase
+  font-weight: 900
+  background: $c2
+  box-shadow: 0px 16px 33px rgba(120, 0, 255, 0.2)
+  border-radius: 100px
+  padding: s(20px) s(40px) s(19px)
   line-height: 1
-  box-sizing: border-box
   transition: .5s ease
-  +screen('max', 575)
-    width: 100%
-    padding: s(19px) s(25px)
-  &_transparent
-    background: none
-  &_white
-    border-color: #fff
-    &:hover
-      background: $c2
-      border-color: $c2
-    &:active
-      background: #DA6D08
-      border-color: #DA6D08
-  &_green
-    color: $c3
-    border-color: $c3
-    &:hover
-      background: $c3
-      border-color: $c3
-      color: #fff
-    &:active
-      background: #045324
-      border-color: #045324
-      color: #fff
-  &_orange
-    color: $c2
-    border-color: $c2
-    &:hover
-      background: $c2
-      border-color: $c2
-      color: #fff
-    &:active
-      background: #DA6D08
-      border-color: #DA6D08
-      color: #fff
-  &_green-border
-    padding: s(19px) s(45px) s(15px)
-    border: none
-    border-bottom: 4px solid #045324
-    &:hover
-      background: #0B863D
-    &:active
-      background: #045324
-      border-bottom-color: #045324
+  &:hover
+    background: #FF4F12;
+    box-shadow: 0px 16px 33px rgba(120, 0, 255, 0.2);
+  &:active
+    box-shadow: none
 .btn-register
-  display: flex
+  display: inline-flex
   justify-content: center
   align-items: center
   +fs(16px)
   letter-spacing: 0.07em
   color: #fff
   text-transform: uppercase
-  font-weight: bold
-  background-color: $c2
-  border-bottom: 4px solid #DA6D08
-  padding: s(22px) s(40px) s(17px)
+  font-weight: 900
+  background: $c2
+  box-shadow: 0px 16px 33px rgba(120, 0, 255, 0.2)
+  border-radius: 100px
+  padding: s(20px) s(40px) s(19px)
   line-height: 1
   transition: .5s ease
   +screen('max', 575)
-    width: 100%
+    padding: s(20px) s(20px) s(19px)
   &:after
     content: ''
-    width: 2.1rem
-    height: 2.1rem
+    width: 21px
+    height: 21px
     display: block
     background-image: url(../icons/icon-btn--reg.svg)
     background-position: center
@@ -84,7 +46,7 @@
     background-size: contain
     margin-left: s(10px)
   &:hover
-    background: #F09E00
+    background: #FF4F12;
+    box-shadow: 0px 16px 33px rgba(120, 0, 255, 0.2);
   &:active
-    background: #DA6D08
-    border-bottom-color: #DA6D08
+    box-shadow: none

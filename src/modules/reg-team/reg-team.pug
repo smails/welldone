@@ -1,0 +1,41 @@
+mixin reg-team(vars)
+  +b.reg-team
+    +e.inner.inner
+      +b.FORM.form
+        +e.P.title Капитан команды
+        +e.group
+          +e.P.caption Фамилия
+          +e.INPUT.field(type="text" placeholder="Ваша фамилия")
+        +e.group
+          +e.P.caption Имя
+          +e.INPUT.field(type="text" placeholder="Ваше имя")
+        +e.group
+          +e.P.caption Город
+          +e.INPUT.field(type="text" placeholder="Из какого вы города")
+        +e.group
+          +e.P.caption E-mail
+          +e.INPUT.field(type="email" placeholder="Ваш E-mail")
+        +e.group
+          +e.P.caption Номер телефона
+          +e.INPUT.field(type="text" placeholder="+7(___) __-__-__")
+        +e.box
+          +e.P.sign Небольшой текст подсказка для придумывания пароля
+          +e.group
+            +e.P.caption Пароль
+            +e.INPUT.field(type="password" placeholder="Введите пароль")
+          +e.group
+            +e.P.caption Повторите пароль
+            +e.INPUT.field(type="password" placeholder="Введите пароль еще раз")
+          +e.group
+            +e.P.caption Название команды
+            +e.INPUT.field(type="text" placeholder="Введите название команды")
+          +e.LABEL.file
+            +e.INPUT.hidden(type="file")
+            +e.add-file
+              span Загрузить логотип
+              svg(width='26' height='26' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M12.188 1.625C5.468 1.625 0 7.093 0 13.813c0 3.258 1.268 6.313 3.567 8.62A12.127 12.127 0 0012.187 26c6.72 0 12.188-5.468 12.188-12.188 0-6.719-5.468-12.187-12.188-12.187zm0 22.75c-2.82 0-5.477-1.097-7.467-3.096a10.471 10.471 0 01-3.096-7.466c0-5.826 4.737-10.563 10.563-10.563 5.825 0 10.562 4.737 10.562 10.563 0 5.825-4.737 10.562-10.563 10.562z' fill='#767676')
+                path(d='M19.5 13v1.625H13v6.5h-1.625v-6.5h-6.5V13h6.5V6.5H13V13h6.5z' fill='#767676')
+        +e.BUTTON.btn.btn-register зарегистрироваться
+      +e.BUTTON.add-pers Добавить игрока
+      +e.team

@@ -1,0 +1,85 @@
+mixin team(vars)
+  +b.team-list
+    +e.inner.inner_middle
+      +e.H1.title.title регистрация команды
+      +b.table
+        +e.head
+          +e.P.title Команда
+            span “А что, так можно было?”
+        +e.body
+          +e.row_head
+            +e.col_head Фамилия
+            +e.col_head Имя
+            +e.col_head E-mail
+            +e.col_head Номер
+              br
+              | телефона
+            +e.col_head Центр ОЦО РТК/
+              br
+              | Организация
+            +e.col_head Город
+            +e.col_head Роль
+          - for (var i = 0; i < 6; i++) {
+            +e.row
+              +e.col Фамилия
+              +e.col Имя
+              +e.col E-mail
+              +e.col Номер 
+                br
+                | телефона
+              +e.col Центр ОЦО РТК/ 
+                br
+                | Организация
+              +e.col Город
+              +e.col
+                +e.SPAN.desk-text Роль
+                +b.mobile-radio
+                  +b.LABEL.radio
+                    +e.INPUT.hidden(type="radio" name="role")
+                    +e.SPAN.text Капитан
+                  +b.LABEL.radio
+                    +e.INPUT.hidden(type="radio" name="role")
+                    +e.SPAN.text Участник
+              +e.BUTTON.remove
+                +e.SVG.remove-icon(width='26' height='26' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M13 0C5.811 0 0 5.811 0 13s5.811 13 13 13 13-5.811 13-13S20.189 0 13 0zm6.5 17.667L17.667 19.5 13 14.833 8.333 19.5 6.5 17.667 11.167 13 6.5 8.333 8.333 6.5 13 11.167 17.667 6.5 19.5 8.333 14.833 13l4.667 4.667z' fill='#fff')
+                +e.SPAN.remove-title Удалить
+          - }
+        +e.BUTTON.add-pers Добавить игрока
+  +b.lk
+    +e.inner.inner
+      +e.H2.title.title_decore личный кабинет
+      +e.info
+        +e.head
+          +e.picture
+            +e.IMG.pic(src='/images/lk-photo.jpg' alt='')
+          +e.P.caption Команда
+            span “А что, так можно было?”
+        +e.body
+          +e.list
+            +e.item_head
+              +e.hold Фамилия
+              +e.hold Имя
+            +e.item
+              +e.name Николаев
+              +e.name Александр
+            +e.item
+              +e.name Овсянников
+              +e.name Владимир
+            +e.item
+              +e.name Николаев
+              +e.name Александр
+            +e.item
+              +e.name Овсянников
+              +e.name Владимир
+            +e.item
+              +e.name Николаев
+              +e.name Александр
+            +e.item
+              +e.name Овсянников
+              +e.name Владимир
+          +e.control
+            +e.A.btn_purple(href="#") Личные рекорды
+            +e.A.btn_blue(href="#") загрузка отчетов
+            +e.A.btn_green(href="#") Статус выполненных заданий
+            +e.A.btn_tomato(href="#") правила лк

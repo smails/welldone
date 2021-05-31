@@ -1,0 +1,25 @@
+.registration
+  min-height: 46rem
+  background-image: url(../images/registration-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: right
+  padding: 7rem 0
+  box-sizing: border-box
+  +screen('max', 1023)
+    background-position-x: 90%
+  +screen('max', 575)
+    background-image: url(../images/registration-bg--mobile.jpg)
+    background-size: cover
+  &__text
+    +fs(18px)
+    line-height: 1.4
+    color: #fff
+    +screen('max', 1200)
+      max-width: 80%
+    +screen('max', 575)
+      max-width: 100%
+    p
+      margin-bottom: 1.3rem
+  &__btn
+    margin-top: 5rem
